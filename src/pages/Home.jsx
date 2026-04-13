@@ -1,14 +1,7 @@
-import { Link } from "react-router";
+import App from "../App";
 
 const Home = () => {
-    return (
-        <>
-            <h1>Home</h1>
-            <p>
-                <Link to="/">Go Back</Link>
-            </p>
-        </>
-    )
-}
+  return <App />;
+};
 
 export default Home;

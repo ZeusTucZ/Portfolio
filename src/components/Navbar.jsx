@@ -1,27 +1,40 @@
 import "./Navbar.css";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
-const Navbar = ({ children }) => {
+const navItems = [
+  { to: "/", label: "Inicio" },
+  { to: "/aboutme", label: "Sobre mí" },
+  { to: "/projects", label: "Proyectos" },
+  { to: "/contactme", label: "Contacto" },
+];
+
+const Navbar = () => {
   return (
-    <>
-      <div className="cointainer-navbar">
-        <div className="links">
-          <p>
-            <Link to="/home">Home</Link>
-          </p>
-          <p>
-            <Link to="/aboutme">About Me</Link>
-          </p>
-          <p>
-            <Link to="/projects">Projects</Link>
-          </p>
-          <p>
-            <Link to="/contactme">Contact Me</Link>
-          </p>
-        </div>
+    <header className="site-header">
+      <div className="site-header-inner">
+        <Link className="brand-mark" to="/">
+          ZT
+        </Link>
+
+        <nav className="site-nav" aria-label="Principal">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) =>
+                isActive ? "nav-link nav-link-active" : "nav-link"
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <a className="header-cta" href="#projects">
+          Works
+        </a>
       </div>
-      {children}
-    </>
+    </header>
   );
 };
 

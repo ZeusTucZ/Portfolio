@@ -1,29 +1,200 @@
-
-
-.main-text {
-  font-size: 96px;
-  font-weight: bold;
-  color: white;
+.hero-section {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  padding: 32px 0 12px;
 }
 
-.secondary-text {
-  background: linear-gradient(0.25turn, #00ff9d, #ebf8e1, #cf5cff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero-copy {
+  max-width: 680px;
 }
 
-.btn {
-    width: 200px;
-    height: 58px;
-    border: None;
-    background-color: #00ff9d;
-    font-size: 20px;
-    text-transform: uppercase;
+.hero-eyebrow {
+  display: inline-flex;
+  padding: 8px 14px;
+  border: 1px solid rgba(125, 249, 208, 0.18);
+  border-radius: 999px;
+  color: var(--teal);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  background: rgba(125, 249, 208, 0.06);
 }
 
-.btn-container {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+.hero-title {
+  margin: 20px 0 18px;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(3.4rem, 8vw, 7rem);
+  line-height: 0.92;
+  font-weight: 400;
+}
+
+.hero-title span {
+  color: var(--gold);
+}
+
+.hero-description {
+  max-width: 560px;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.hero-button {
+  min-height: 54px;
+  padding: 0 24px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-button-primary {
+  background: linear-gradient(135deg, var(--gold), #f7f3d8);
+  color: #101722;
+}
+
+.hero-button-secondary {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.hero-showcase {
+  position: relative;
+  min-height: 620px;
+  border-radius: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(125, 249, 208, 0.12), transparent 28%),
+    radial-gradient(circle at 80% 15%, rgba(255, 209, 107, 0.16), transparent 25%),
+    linear-gradient(180deg, rgba(16, 28, 48, 0.95), rgba(7, 14, 26, 0.92));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.showcase-orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+
+.showcase-orbit-top {
+  top: 52px;
+  left: 38px;
+  width: 220px;
+  height: 220px;
+}
+
+.showcase-orbit-bottom {
+  right: -40px;
+  bottom: 120px;
+  width: 280px;
+  height: 280px;
+}
+
+.showcase-card {
+  position: absolute;
+  display: grid;
+  gap: 8px;
+  width: min(320px, calc(100% - 48px));
+  padding: 22px;
+  border-radius: 28px;
+  background: rgba(7, 14, 26, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+}
+
+.showcase-card span {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--teal);
+}
+
+.showcase-card strong {
+  font-size: 1.45rem;
+}
+
+.showcase-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.showcase-card-primary {
+  top: 96px;
+  right: 34px;
+}
+
+.showcase-card-secondary {
+  left: 34px;
+  bottom: 130px;
+}
+
+.showcase-metrics {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  bottom: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 980px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 12px;
+  }
+
+  .hero-showcase {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: clamp(2.8rem, 16vw, 4.4rem);
+  }
+
+  .hero-showcase {
+    min-height: 560px;
+    border-radius: 28px;
+  }
+
+  .showcase-card {
+    left: 18px;
+    right: 18px;
+    width: auto;
+  }
+
+  .showcase-card-primary {
+    top: 82px;
+  }
+
+  .showcase-card-secondary {
+    bottom: 168px;
+  }
+
+  .showcase-metrics {
+    left: 18px;
+    right: 18px;
+    grid-template-columns: 1fr;
+  }
 }
