@@ -5,6 +5,7 @@ import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import AboutMe from './pages/AboutMe.jsx'
 import Projects from './pages/Projects.jsx'
+import ProjectOverview from './pages/ProjectOverview.jsx'
 import ContactMe from './pages/ContactMe.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router'
 
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/home" element={<Home />} />
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:slug" element={<ProjectOverview />} />
         <Route path="/contactme" element={<ContactMe />} />
       </Routes>
     </BrowserRouter>
