@@ -42,7 +42,7 @@ const Projects = () => {
               key={project.title}
               to={`/projects/${project.slug}`}
             >
-              <span className="project-index">0{index + 1}</span>
+              <span className="project-index">{project.number}</span>
               <h3>{project.title}</h3>
               <p>{project.summary}</p>
               <div className="project-tags">
@@ -58,29 +58,34 @@ const Projects = () => {
           <span className="section-kicker">Certificates</span>
         </section>
 
-        <section className="certificate-carousel" aria-label="Certificates">
-          {certificates.map((certificate, index) => (
-            <a
-              className={`certificate-overview-card ${
-                index === featuredCertificateIndex ? "is-featured" : ""
-              }`}
-              key={certificate.title}
-              href={certificate.link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <CertificatePreview certificate={certificate} />
-              <div className="certificate-overview-copy">
-                <h3>{certificate.title}</h3>
-                <p>{certificate.summary}</p>
-                <div className="project-tags">
-                  <span>{certificate.issuer}</span>
-                  <span>{certificate.year}</span>
-                  <span>{certificate.category}</span>
+        <section className="certificate-marquee" aria-label="Certificates">
+          <div className="certificate-marquee-track">
+            {[...certificates, ...certificates].map((certificate, index) => (
+              <a
+                className={`certificate-overview-card ${
+                  certificate.number === certificates[featuredCertificateIndex].number
+                    ? "is-featured"
+                    : ""
+                }`}
+                key={`${certificate.title}-${index}`}
+                href={certificate.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="project-index">{certificate.number}</span>
+                <CertificatePreview certificate={certificate} />
+                <div className="certificate-overview-copy">
+                  <h3>{certificate.title}</h3>
+                  <p>{certificate.summary}</p>
+                  <div className="project-tags">
+                    <span>{certificate.issuer}</span>
+                    <span>{certificate.year}</span>
+                    <span>{certificate.category}</span>
+                  </div>
                 </div>
-              </div>
-            </a>
-          ))}
+              </a>
+            ))}
+          </div>
         </section>
       </main>
     </div>

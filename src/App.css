@@ -848,3 +848,33 @@
   width: 0;
   height: 0;
 }
+
+.certificate-marquee {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  padding: 22px 0 38px;
+}
+
+.certificate-marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 22px;
+  width: max-content;
+  animation: certificate-marquee 38s linear infinite;
+}
+
+.certificate-marquee:hover .certificate-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes certificate-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 11px));
+  }
+}

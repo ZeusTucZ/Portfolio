@@ -1,4 +1,12 @@
-export const projects = [
+const formatItemNumber = (index) => String(index + 1).padStart(2, "0");
+
+const withItemNumbers = (items) =>
+  items.map((item, index) => ({
+    ...item,
+    number: formatItemNumber(index),
+  }));
+
+const projectItems = [
   {
     slug: "elyos-racing-team",
     title: "Elyos Racing Team",
@@ -58,7 +66,7 @@ export const projects = [
   },
 ];
 
-export const certificates = [
+const certificateItems = [
   {
     title: "Oracle Cloud Infrastructure (OCI) Foundations Associate",
     summary: "Cloud fundamentals credential focused on OCI services, architecture, and core platform concepts.",
@@ -116,3 +124,7 @@ export const certificates = [
     link: "https://drive.google.com/file/d/1KhPYm1C0T-40S-9WdeZvzZkT_pG76oo2/view?usp=sharing"
   }
 ];
+
+export const projects = withItemNumbers(projectItems);
+
+export const certificates = withItemNumbers(certificateItems);
