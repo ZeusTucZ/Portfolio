@@ -16,7 +16,7 @@ export const projects = [
     ],
     outcome:
       "A project presentation flow that frames the product, the interface decisions, and the impact more clearly than a raw repository link.",
-    github: "https://your-project-link.com",
+    github: "https://github.com/ZeusTucZ/Elyos-Telemetry",
   },
   {
     slug: "nutrition-app",
@@ -35,7 +35,7 @@ export const projects = [
     ],
     outcome:
       "A polished case-study style overview that communicates product decisions, not just implementation.",
-    github: "https://your-project-link.com",
+    github: "https://drive.google.com/drive/folders/1X9KR8HqeOSzYyoSSVEE-WcJcwMJdZ8af",
   },
   {
     slug: "smart-mirror",
@@ -54,49 +54,65 @@ export const projects = [
     ],
     outcome:
       "A more intentional showcase page that presents the concept, responsibilities, and user value in one place.",
-    github: "https://your-project-link.com",
-  },
-  {
-    slug: "proyecto-cuatro",
-    title: "Proyecto Cuatro",
-    summary: "Flexible space to present an experimental build or smaller case study.",
-    description:
-      "A portfolio-ready project slot that can frame experiments, prototypes, and side work with enough structure to feel deliberate.",
-    year: "2024",
-    role: "Creative Development",
-    duration: "4 weeks",
-    stack: ["Frontend", "Prototyping", "Visual Systems"],
-    highlights: [
-      "Adaptable case-study structure",
-      "Built to support future iterations",
-      "Useful for showcasing exploratory work",
-    ],
-    outcome:
-      "Turns a generic archive entry into a real project page with narrative, stats, and next actions.",
-    github: "https://your-project-link.com",
+    github: "https://github.com/danihdz11/Smart-Mirror",
   },
 ];
 
 export const certificates = [
   {
     title: "Oracle Cloud Infrastructure (OCI) Foundations Associate",
+    summary: "Cloud fundamentals credential focused on OCI services, architecture, and core platform concepts.",
+    issuer: "Oracle",
+    year: "2026",
+    category: "Cloud",
     link: "https://drive.google.com/file/d/108MJNYTEdnUXAzgJKHvCWzTOx-4BJ33V/view",
   },
   {
     title: "Oracle Cloud Infrastructure (OCI) AI Foundations Associate",
+    summary: "AI foundations certification covering OCI AI services, machine learning concepts, and applied cloud use cases.",
+    issuer: "Oracle",
+    year: "2026",
+    category: "AI",
     link: "https://drive.google.com/file/d/1NszRxV8fscqQDoagyQuRi-gxA6I3L1x_/view",
   },
   {
     title: "Smart Mirror (1st Place)",
-    summary: "Summary of the smart mirror.",
+    summary: "First-place recognition for a smart mirror project blending hardware, product thinking, and interface design.",
+    issuer: "Project Award",
+    year: "2025",
+    category: "Award",
     link: "https://drive.google.com/file/d/1Uo6PxW_tF16aJmc5TvvSlPt9WQb-I_m7/view",
   },
   {
     title: "Master the Coding Interview: Data Structures + Algorithms",
+    summary: "Practical training in data structures, algorithms, and interview-style problem solving.",
+    issuer: "Udemy",
+    year: "2025",
+    category: "Algorithms",
     link: "https://www.udemy.com/certificate/UC-e7d39414-74b3-46c6-b8b1-64b29e95e29d/",
   },
   {
     title: "Machine Learning with Python",
+    summary: "Applied machine learning credential covering Python-based workflows, models, and evaluation fundamentals.",
+    issuer: "Coursera",
+    year: "2025",
+    category: "Machine Learning",
     link: "https://www.coursera.org/account/accomplishments/verify/CTV61QX5EH4F",
   },
+  {
+    title: "Hack MTY Participation",
+    summary: "Participation credential from Hack MTY, focused on fast product building and collaborative problem solving.",
+    issuer: "Hack MTY",
+    year: "2025",
+    category: "Hackathon",
+    link: "https://drive.google.com/file/d/1PJHBKKhIYtdnj-e63w16tIANlgEoempt/view?usp=sharing"
+  },
+  {
+    title: "Shell Eco Marathon 2026",
+    summary: "Competition credential connected to efficient mobility, engineering execution, and team collaboration.",
+    issuer: "Shell Eco Marathon",
+    year: "2026",
+    category: "Engineering",
+    link: "https://drive.google.com/file/d/1KhPYm1C0T-40S-9WdeZvzZkT_pG76oo2/view?usp=sharing"
+  }
 ];
