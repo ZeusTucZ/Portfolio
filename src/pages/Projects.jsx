@@ -10,15 +10,24 @@ const CertificatePreview = ({ certificate }) => (
     {certificate.image ? (
       <img src={certificate.image} alt="" />
     ) : (
-      <>
-        <div className="certificate-preview-paper">
-          <span>{certificate.issuer}</span>
-          <strong>{certificate.title}</strong>
+      <div className="certificate-preview-paper">
+        <div className="certificate-preview-seal">
+          {certificate.number}
         </div>
-      </>
+
+        <span>{certificate.issuer}</span>
+        <strong>{certificate.title}</strong>
+
+        <div className="certificate-preview-lines">
+          <span />
+          <span />
+          <span />
+        </div>
+      </div>
     )}
   </div>
 );
+
 
 const Projects = () => {
   const featuredProjectIndex = getCenterIndex(projects);
@@ -72,15 +81,24 @@ const Projects = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="project-index">{certificate.number}</span>
+                <div className="certificate-card-header">
+                  <span className="project-index">{certificate.number}</span>
+                  <div>
+                    <span>{certificate.issuer}</span>
+                    <strong>{certificate.year}</strong>
+                  </div>
+                </div>
+
                 <CertificatePreview certificate={certificate} />
+
                 <div className="certificate-overview-copy">
+                  <span className="section-kicker">{certificate.category}</span>
                   <h3>{certificate.title}</h3>
                   <p>{certificate.summary}</p>
-                  <div className="project-tags">
-                    <span>{certificate.issuer}</span>
-                    <span>{certificate.year}</span>
-                    <span>{certificate.category}</span>
+
+                  <div className="certificate-overview-footer">
+                    <span>Credential overview</span>
+                    <strong>Open</strong>
                   </div>
                 </div>
               </a>

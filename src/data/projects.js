@@ -73,6 +73,7 @@ const certificateItems = [
     issuer: "Oracle",
     year: "2026",
     category: "Cloud",
+    image: "/oci-foundations.jpg",
     link: "https://drive.google.com/file/d/108MJNYTEdnUXAzgJKHvCWzTOx-4BJ33V/view",
   },
   {
@@ -81,6 +82,7 @@ const certificateItems = [
     issuer: "Oracle",
     year: "2026",
     category: "AI",
+    image: "/oci-ai-foundations.jpg",
     link: "https://drive.google.com/file/d/1NszRxV8fscqQDoagyQuRi-gxA6I3L1x_/view",
   },
   {
@@ -89,6 +91,7 @@ const certificateItems = [
     issuer: "Project Award",
     year: "2025",
     category: "Award",
+    image: "/expo-ingenierias.jpg",
     link: "https://drive.google.com/file/d/1Uo6PxW_tF16aJmc5TvvSlPt9WQb-I_m7/view",
   },
   {
@@ -97,6 +100,7 @@ const certificateItems = [
     issuer: "Udemy",
     year: "2025",
     category: "Algorithms",
+    image: "/master-coding-interview.jpg",
     link: "https://www.udemy.com/certificate/UC-e7d39414-74b3-46c6-b8b1-64b29e95e29d/",
   },
   {
@@ -105,6 +109,7 @@ const certificateItems = [
     issuer: "Coursera",
     year: "2025",
     category: "Machine Learning",
+    image: "/machine-learning-with-python.jpg",
     link: "https://www.coursera.org/account/accomplishments/verify/CTV61QX5EH4F",
   },
   {
@@ -113,6 +118,7 @@ const certificateItems = [
     issuer: "Hack MTY",
     year: "2025",
     category: "Hackathon",
+    image: "/hack-mty.jpeg",
     link: "https://drive.google.com/file/d/1PJHBKKhIYtdnj-e63w16tIANlgEoempt/view?usp=sharing"
   },
   {
@@ -121,6 +127,7 @@ const certificateItems = [
     issuer: "Shell Eco Marathon",
     year: "2026",
     category: "Engineering",
+    image: "/shell-eco-marathon.jpg",
     link: "https://drive.google.com/file/d/1KhPYm1C0T-40S-9WdeZvzZkT_pG76oo2/view?usp=sharing"
   }
 ];
