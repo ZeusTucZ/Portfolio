@@ -5,7 +5,7 @@ import "../App.css";
 
 const getCenterIndex = (items) => Math.floor(items.length / 2);
 
-const CertificatePreview = ({ certificate, index }) => (
+const CertificatePreview = ({ certificate }) => (
   <div className="certificate-preview" aria-hidden="true">
     {certificate.image ? (
       <img src={certificate.image} alt="" />
@@ -56,11 +56,6 @@ const Projects = () => {
 
         <section className="inner-hero certificates showcase-heading">
           <span className="section-kicker">Certificates</span>
-          <h1>Certificaciones en formato overview.</h1>
-          <p>
-            Quedan listas para mostrar imagen real del certificado cuando la
-            agregues al repositorio.
-          </p>
         </section>
 
         <section className="certificate-carousel" aria-label="Certificates">
@@ -74,7 +69,7 @@ const Projects = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <CertificatePreview certificate={certificate} index={index} />
+              <CertificatePreview certificate={certificate} />
               <div className="certificate-overview-copy">
                 <h3>{certificate.title}</h3>
                 <p>{certificate.summary}</p>

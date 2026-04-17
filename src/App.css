@@ -831,3 +831,20 @@
     min-height: 176px;
   }
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-strip,
+.certificate-carousel {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.horizontal-strip::-webkit-scrollbar,
+.certificate-carousel::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
